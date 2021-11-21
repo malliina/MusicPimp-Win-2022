@@ -43,6 +43,11 @@ namespace MusicPimp.Http
             return GetAsync<HealthResponse>("/health");
         }
 
+        public Task<LibraryResponse> Folder(string id)
+        {
+            return GetAsync<LibraryResponse>($"/folders/{id}");
+        }
+
         private async Task<T> GetAsync<T>(string path)
         {
             var url = $"{baseUrl}{path}";

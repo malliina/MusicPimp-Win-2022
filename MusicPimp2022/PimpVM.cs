@@ -19,7 +19,7 @@ namespace MusicPimp
         private string passwordInput;
         private bool savePassword;
         private string submitButtonText;
-
+        public event EventHandler OnLoginSuccess;
 
         private string feedbackText;
 
@@ -99,6 +99,7 @@ namespace MusicPimp
                 SaveCredentials(creds);
                 Debug.Print($"Version {version.Version}");
                 FeedbackText = $"Welcome to version {version.Version}.";
+                OnLoginSuccess?.Invoke(this, EventArgs.Empty);
             }
             catch (HttpException he)
             {

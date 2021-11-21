@@ -11,8 +11,11 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
+using System.Runtime.InteropServices;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
+using Windows.UI.ViewManagement;
+using System.Diagnostics;
 
 // To learn more about WinUI, the WinUI project structure,
 // and more about our project templates, see: http://aka.ms/winui-project-info.
@@ -24,12 +27,12 @@ namespace MusicPimp2022
     /// </summary>
     public sealed partial class MainWindow : Window
     {
-        public PimpVM VM { get; set; }
-
         public MainWindow()
         {
-            VM = new PimpVM();
+            //VM = new PimpVM();
             this.InitializeComponent();
+            this.Title = "MusicPimp";
+            Debug.Print($"Bounds: {Bounds.Width}x{Bounds.Height}");
         }
     }
 }
