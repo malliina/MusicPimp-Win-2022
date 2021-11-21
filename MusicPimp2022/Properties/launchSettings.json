@@ -1,0 +1,10 @@
+{
+  "profiles": {
+    "MusicPimp2022 (Package)": {
+      "commandName": "MsixPackage"
+    },
+    "MusicPimp2022 (Unpackaged)": {
+      "commandName": "Project"
+    }
+  }
+}
